@@ -1,4 +1,6 @@
-require "genron_sf/version"
+# frozen_string_literal: true
+
+require 'genron_sf/version'
 
 module GenronSf
   class Error < StandardError; end
