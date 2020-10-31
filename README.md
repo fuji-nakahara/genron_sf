@@ -7,7 +7,7 @@ Utility for [超・SF作家育成サイト](https://school.genron.co.jp/works/sf
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'genron_sf'
+gem 'genron_sf', source: 'https://rubygems.pkg.github.com/fuji-nakahara'
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install genron_sf
+    $ gem install genron_sf --source 'https://rubygems.pkg.github.com/fuji-nakahara'
 
 ## Usage
 
