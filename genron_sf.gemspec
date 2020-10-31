@@ -4,7 +4,7 @@ require_relative 'lib/genron_sf/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'genron_sf'
-  spec.version       = GenronSf::VERSION
+  spec.version       = GenronSF::VERSION
   spec.authors       = ['Fuji Nakahara']
   spec.email         = ['fujinakahara2032@gmail.com']
 
@@ -26,4 +26,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = 'exe'
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
+
+  spec.add_dependency 'gepub', '>= 1.0'
+  spec.add_dependency 'nokogiri', '>= 1.10'
 end
