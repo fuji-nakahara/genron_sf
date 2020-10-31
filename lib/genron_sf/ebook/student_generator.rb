@@ -30,11 +30,11 @@ module GenronSF
             book.add_item(
               "#{work.subject.number}-title.xhtml",
               content: StringIO.new(TemplateUtil.title_xhtml(title)),
-              toc_text: title,
+              toc_text: title
             )
             book.add_item(
               "#{work.subject.number}-work.xhtml",
-              content: StringIO.new(TemplateUtil.work_xhtml(work)),
+              content: StringIO.new(TemplateUtil.work_xhtml(work))
             )
           end
         end

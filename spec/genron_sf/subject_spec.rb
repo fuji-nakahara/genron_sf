@@ -7,13 +7,13 @@ RSpec.describe GenronSF::Subject do
     it 'fetches the subject list page, parses its HTML and returns SubjectList instance' do
       expect(subjects.to_a.size).to eq 11
 
-      subject10 = subjects.find { _1.number == 10 }
+      subject10 = subjects.find { |s| s.number == 10 }
       expect(subject10.theme).to eq '最終課題：ゲンロンSF新人賞【梗概】'
       expect(subject10.summary_deadline.to_s).to eq '2019-03-14'
       expect(subject10.work_deadline).to be nil
       expect(subject10.without_summary?).to be false
 
-      subject11 = subjects.find { _1.number == 11 }
+      subject11 = subjects.find { |s| s.number == 11 }
       expect(subject11.theme).to eq '最終課題：ゲンロンSF新人賞【実作】'
       expect(subject11.summary_deadline).to be nil
       expect(subject11.work_deadline.to_s).to eq '2019-04-15'
@@ -36,7 +36,7 @@ RSpec.describe GenronSF::Subject do
       expect(subject.work_comment_date.to_s).to eq '2018-12-14'
       expect(subject.lecturers.to_a.size).to eq 5
       expect(subject.lecturers.map(&:name)).to match_array %w[長谷敏司 溝口力丸 飛浩隆 塩澤快浩 大森望]
-      expect(subject.lecturers.find { _1.name == '長谷敏司' }.roles).to match_array %w[課題提示 梗概講評]
+      expect(subject.lecturers.find { |l| l.name == '長谷敏司' }.roles).to match_array %w[課題提示 梗概講評]
       expect(subject.summaries.size).to eq 26
       expect(subject.works.size).to eq 11
       expect(subject.scores.size).to eq 4

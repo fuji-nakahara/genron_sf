@@ -9,7 +9,7 @@ options = {
   type: 'subject',
   year: nil,
   id: nil,
-  path: nil,
+  path: nil
 }
 
 OptionParser.new do |opt_parser|

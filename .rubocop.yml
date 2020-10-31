@@ -3,7 +3,25 @@ require:
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.6
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/CyclomaticComplexity:
+  Max: 8
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
 
 Style/Documentation:
+  Enabled: false
+
+# rubocop-rspec
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
   Enabled: false

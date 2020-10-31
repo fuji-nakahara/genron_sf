@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = 'Utility for 超・SF作家育成サイト'
   spec.homepage      = 'https://github.com/fuji-nakahara/genron_sf'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.5.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.6.0')
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.pkg.github.com/fuji-nakahara'
 
