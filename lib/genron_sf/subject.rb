@@ -99,6 +99,12 @@ module GenronSF
       end.compact
     end
 
+    def excellent_entries
+      main.css('.type-excellents').map do |element|
+        entries.find { |entry| entry.url == element.at_css('a')['href'] }
+      end.compact
+    end
+
     def scores
       @scores ||= main.css('.has-score').map do |element|
         work = entries.find { |entry| entry.url == element.at_css('a')['href'] }
