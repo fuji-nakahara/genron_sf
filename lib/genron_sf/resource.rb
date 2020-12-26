@@ -27,7 +27,7 @@ module GenronSF
 
     def fetch_and_parse!
       GenronSF.logger.info "Fetching #{url}"
-      io = URI.open(url, redirect: false)
+      io = OpenURI.open_uri(url, redirect: false)
       Nokogiri::HTML.parse(io)
     rescue OpenURI::HTTPError => e
       raise HTTPError, "Failed to fetch #{url}: #{e.message}"
