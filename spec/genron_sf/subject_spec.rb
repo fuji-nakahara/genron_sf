@@ -10,12 +10,12 @@ RSpec.describe GenronSF::Subject do
       subject10 = subjects.find { |s| s.number == 10 }
       expect(subject10.theme).to eq '最終課題：ゲンロンSF新人賞【梗概】'
       expect(subject10.summary_deadline.to_s).to eq '2019-03-14'
-      expect(subject10.work_deadline).to be nil
+      expect(subject10.work_deadline).to be_nil
       expect(subject10.without_summary?).to be false
 
       subject11 = subjects.find { |s| s.number == 11 }
       expect(subject11.theme).to eq '最終課題：ゲンロンSF新人賞【実作】'
-      expect(subject11.summary_deadline).to be nil
+      expect(subject11.summary_deadline).to be_nil
       expect(subject11.work_deadline.to_s).to eq '2019-04-15'
       expect(subject11.without_summary?).to be true
     end

@@ -2,6 +2,6 @@
 
 RSpec.describe GenronSF do
   it 'has a version number' do
-    expect(GenronSF::VERSION).not_to be nil
+    expect(GenronSF::VERSION).not_to be_nil
   end
 end

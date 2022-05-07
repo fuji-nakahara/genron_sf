@@ -34,7 +34,7 @@ module GenronSF
     private
 
     def student_name_to_scores
-      doc.css('#table-scores tbody tr').map do |tr|
+      doc.css('#table-scores tbody tr').map do |tr| # rubocop:disable Style/MapToHash
         tds = tr.css('td')
         name = tds.first.content
         scores = tds[2..].map { |td| td.content[/\d+/]&.to_i }.compact
