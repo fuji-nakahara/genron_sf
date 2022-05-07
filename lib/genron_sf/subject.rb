@@ -87,13 +87,13 @@ module GenronSF
       if without_summary?
         entries
       else
-        main.css('.has-work a').map { |element| entries.find { |entry| entry.url == element['href'] } }.compact
+        main.css('.has-work .title a').map { |element| entries.find { |entry| entry.url == element['href'] } }.compact
       end
     end
 
     def entries
-      @entries ||= main.css('.written a').map do |element|
-        url = element['href']
+      @entries ||= main.css('.written').map do |element|
+        url = element.at_css('.title a')['href']
         student = Student.new(url: url.delete_suffix("#{url.split('/').last}/"), name: element.at_css('.name').content)
         Work.new(url, subject: self, student: student) if !url.nil? && !url.empty?
       end.compact

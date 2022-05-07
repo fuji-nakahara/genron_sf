@@ -5,7 +5,7 @@ RSpec.describe GenronSF::Student do
     subject(:students) { described_class.list(year: 2018) }
 
     it 'fetches the student list page, parses its HTML and returns StudentList instance' do
-      expect(students.to_a.size).to eq 48
+      expect(students.to_a.size).to eq 49
       expect(students.map(&:name)).to include 'フジ・ナカハラ'
     end
   end

@@ -23,7 +23,7 @@ RSpec.describe GenronSF::Subject do
 
   describe '.get' do
     # rubocop:disable RSpec/NamedSubject
-    subject(:subject) { described_class.get(year: 2018, number: 6) }
+    subject { described_class.get(year: 2018, number: 6) }
 
     it 'fetches the subject page, parses its HTML and returns Subject instance' do
       expect(subject.year).to eq 2018
