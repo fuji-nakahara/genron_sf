@@ -27,7 +27,7 @@ module GenronSF
     private
 
     def students
-      @students ||= main.css('.student-list-item a').map do |element|
+      @students ||= main.css('.student-list-item-2 a').map do |element|
         Student.new(url: element['href'], name: element.at_css('.name').content.strip)
       end
     end
