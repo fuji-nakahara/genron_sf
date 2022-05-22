@@ -1,6 +1,6 @@
 # GenronSF
 
-Utility for [超・SF作家育成サイト](https://school.genron.co.jp/works/sf/)
+Ruby gem for scraping and ebook generation of [超・SF作家育成サイト](https://school.genron.co.jp/works/sf/)
 
 ## Installation
 

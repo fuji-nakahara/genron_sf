@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Fuji Nakahara']
   spec.email         = ['fujinakahara2032@gmail.com']
 
-  spec.summary       = 'Utility for 超・SF作家育成サイト'
+  spec.summary       = 'Scraping and ebook generation of 超・SF作家育成サイト'
   spec.homepage      = 'https://github.com/fuji-nakahara/genron_sf'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.6.0')
