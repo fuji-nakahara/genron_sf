@@ -7,7 +7,7 @@ Utility for [超・SF作家育成サイト](https://school.genron.co.jp/works/sf
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'genron_sf', git: 'https://github.com/fuji-nakahara/genron_sf.git', tag: 'v0.2.0'
+gem 'genron_sf', git: 'https://github.com/fuji-nakahara/genron_sf.git', tag: 'v0.2.1'
 ```
 
 And then execute:
