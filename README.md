@@ -20,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-### Scraper
+### EBook Generation (CLI)
+
+```console
+$ genron_sf --help
+Usage: genron_sf [options]
+    -t, --type TYPE                  subject or student (default: subject)
+    -y, --year YEAR                  2016-
+    -n, --id ID                      subject number or student id
+    -o, --output PATH                ./path/to/output.epub
+$ genron_sf --year 2018 -n 1 # Generate SF創作講座2018-01.epub
+```
+
+### Scraping
 
 ```ruby
 require 'genron_sf'
@@ -78,12 +90,6 @@ work.char_count #=> 17790
 work.appeal #=> "入学式の朝の男子生徒とケイ、体育見学時のヒロトとケイ、そして、放課後の河原での二人。この三回を魅力的なやり取りにするつもりです。..."
 work.appeal_character_count #=> 400
 ```
-
-### EBook Generator
-
-    $ genron_sf --type student --year 2018 --id fujinakahara --output ./genron_sf-2018-fujinakahara.epub
-
-Run `genron_sf --help` for more detail.
 
 ## Development
 
