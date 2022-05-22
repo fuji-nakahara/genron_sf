@@ -42,9 +42,9 @@ subject.summary_comment_date #=> #<Date: 2018-06-21 ((2458291j,0s,0n),+0s,229916
 subject.work_deadline #=> #<Date: 2018-07-12 ((2458312j,0s,0n),+0s,2299161j)>
 subject.work_comment_date #=> #<Date: 2018-07-19 ((2458319j,0s,0n),+0s,2299161j)>
 subject.lecturers.find { |lecturer| lecturer.roles.include?('課題提示') }.name #=> "東浩紀"
-subject.summaries # 作品の Enumerable オブジェクト
-subject.works # 実作提出作品の Enumerable オブジェクト
-subject.excellent_entries # 選出・得点作品の Enumerable オブジェクト
+subject.summaries # 作品の配列
+subject.works # 実作提出作品の配列
+subject.excellent_entries # 選出・得点作品の配列
 score = subject.scores.first
 score.work.title #=> "鍬と十字"
 score.value #=> 4
@@ -62,7 +62,7 @@ student.url #=> "https://school.genron.co.jp/works/sf/2018/students/fujinakahara
 student.name #=> "フジ・ナカハラ"
 student.profile #=> "@fuji_nakahara https://fuji-nakahara.page/"
 student.twitter_screen_name #=> "fuji_nakahara"
-student.works # 作品の Enumerable オブジェクト
+student.works # 作品の配列
 
 # 作品詳細
 work = GenronSF::Work.get(year: 2018, student_id: 'fujinakahara', id: 2307)
@@ -81,7 +81,7 @@ work.appeal_character_count #=> 400
 
 ### EBook Generator
 
-    $ genron_sf --type subject --year 2018 --id fujinakahara --output ./genron_sf-2018-fujinakahara.epub
+    $ genron_sf --type student --year 2018 --id fujinakahara --output ./genron_sf-2018-fujinakahara.epub
 
 Run `genron_sf --help` for more detail.
 
