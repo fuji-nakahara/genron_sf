@@ -13,7 +13,7 @@ options = {
 }
 
 OptionParser.new do |opt_parser|
-  opt_parser.on('-t', '--type TYPE', %w[subject student], 'subject or student') do |type|
+  opt_parser.on('-t', '--type TYPE', %w[subject student], 'subject or student (default: subject)') do |type|
     options[:type] = type
   end
 
