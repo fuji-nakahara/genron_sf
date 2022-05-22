@@ -4,19 +4,15 @@ Ruby gem for scraping and ebook generation of [超・SF作家育成サイト](ht
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install the gem and add to the application's Gemfile by executing:
 
-```ruby
-gem 'genron_sf', git: 'https://github.com/fuji-nakahara/genron_sf.git', tag: 'v0.2.1'
-```
+    $ bundle add genron_sf --github fuji-nakahara/genron_sf --branch main
 
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
+If bundler is not being used to manage dependencies, install the gem by executing:
 
     $ gem install genron_sf --source 'https://rubygems.pkg.github.com/fuji-nakahara'
+
+See https://docs.github.com/packages/working-with-a-github-packages-registry/working-with-the-rubygems-registry for more detail of GitHub Packages.
 
 ## Usage
 
@@ -93,9 +89,9 @@ work.appeal_character_count #=> 400
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+After checking out the repo, run `bin/setup` to install dependencies. Then, run `bundle exec rake` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then create and push a git tag, which will start [a GitHub Action workflow](.github/workflows/gem-push.yml), and push the `.gem` file to [GitHub Packages](https://github.com/fuji-nakahara/genron_sf/packages/482545).
 
 ## Contributing
 
