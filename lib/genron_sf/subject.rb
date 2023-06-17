@@ -94,7 +94,10 @@ module GenronSF
     def entries
       @entries ||= main.css('.written').map do |element|
         url = element.at_css('.title a')['href']
-        student = Student.new(url: url.delete_suffix("#{url.split('/').last}/"), name: element.at_css('.name').content)
+        student = Student.new(
+          url: url.delete_suffix("#{url.split('/').last}/"),
+          name: element.at_css('.name').content.strip
+        )
         Work.new(url, subject: self, student: student) if !url.nil? && !url.empty?
       end.compact
     end
