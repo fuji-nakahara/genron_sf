@@ -37,7 +37,7 @@ module GenronSF
     def student
       @student ||= Student.new(
         url: main.at_css('.student-data a')['href'],
-        name: main.at_css('.student-data .name').content.strip
+        name: main.at_css('.student-data .name').content
       )
     end
 

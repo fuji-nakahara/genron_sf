@@ -30,7 +30,7 @@ module GenronSF
     end
 
     def initialize(url:, name: nil)
-      @name = name
+      @name = name&.strip
       super(url)
     end
 
